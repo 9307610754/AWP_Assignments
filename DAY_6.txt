@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pract</title>
+    <script src="22.js"></script>
+</head>
+
+<body>
+
+    <div>
+        <input type="text" id="id1" placeholder="TYPE HERE">
+        <button onclick="readinput()">comment</button>
+    </div>
+
+    <div id="cmtid">
+        Default comment
+    </div>
+
+
+
+</body>
+
+</html>
+
+=====================================================================================================
+///SOURCE FILE///
+
+
+function readinput() {
+    let a = document.querySelector("#id1").value;
+    console.log(a);
+
+    if (a == "") {
+        document.querySelector("#cmtid").innerHTML = "please enter your comment";
+        document.querySelector("#cmtid").style.color = "red";
+    }
+    else {
+        document.querySelector("#cmtid").innerHTML = a;
+        document.querySelector("#id1").value = "";
+
+    }
+
+
+}
+
