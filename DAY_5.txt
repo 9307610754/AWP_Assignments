@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <script src="1.js"></script>
+</head>
+
+<body>
+
+    <input type="text" id="username" placeholder="Type here" name="username">
+    <button onclick="readinput()">Submit</button>
+
+
+</body>
+
+</html>
+
+========================================================================================================
+///source file///
+
+function readinput() {
+    console.log("Success");
+    let username = document.querySelector("#username").value;
+    console.log("Username");
+
+}
