@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Like Button</title>
+    <script src="2.js"></script>
+</head>
+
+<body>
+    <div>
+        <ul
+            style="display:flex; list-style: none; justify-content: space-between; background-color: rgb(163, 163, 199);">
+            <li> Home</li>
+            <li>About us</li>
+            <li>Sign in</li>
+        </ul>
+    </div>
+
+    <div>
+
+        <input type="text" id="inp" placeholder="type here">
+        <button onclick="comment()">Comment</button>
+    </div>
+
+
+    <div>
+
+        <button style="background-color:rgb(151, 151, 201)" onclick="like()" id="like">Like 1</button>
+        <button style="background-color:rgb(141, 141, 189)" onclick="dislike()" id="Dislike">Dislike</button>
+    </div>
+
+    <!--to clone a div-->
+    <div id="commentDiv">
+        <div id="placeComment"> Place the value</div>
+    </div>
+
+
+
+</body>
+
+</html>
+
+
+============================================================================================================================================
+
+///SOURCE FILE///
+
+var count = 0;
+
+function like() {
+
+    let likeCount = document.querySelector("#like");
+    count = count + 1;
+    likeCount.textContent = count;
+}
+
+function dislike() {
+    let dislikeCount = document.querySelector("#like");
+    count = count - 1;
+    dislikeCount.textContent = count;
+
+}
+
+function comment() {
+    let inpValue = document.querySelector("#inp").value;
+    let cloneValue = document.querySelector("#placeComment").cloneNode(true);
+    cloneValue.innerHTML = inpValue;
+
+
+    let commentDiv = document.querySelector("#commentDiv");
+    commentDiv.insertBefore(cloneValue, commentDiv.firstChild)
+
+
+}
+
